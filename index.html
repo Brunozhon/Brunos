@@ -2,4 +2,11 @@
 layout: main
 title: The Brunos
 ---
-<p>Coming soon!</p>
+<ul>
+  {% for bruno in site.data.bruno %}
+  <li>
+    <p>{{ bruno.name }}</p>
+    <meter min="0" max="1000000" low="100" high="500000" optimum="1000" value="{{ bruno.health }}"></meter>
+  </li>
+  {% endfor %}
+</ul>
