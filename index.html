@@ -6,7 +6,10 @@ title: The Brunos
   {% for bruno in site.data.bruno %}
   <li>
     <p>{{ bruno.name }}</p>
-    <meter min="0" max="1000000" low="10000" high="500000" optimum="100000" value="{{ bruno.health }}"></meter>
+    <p>
+      <meter min="0" max="1000000" low="10000" high="500000" optimum="100000" value="{{ bruno.health }}"></meter>
+      {{ bruno.health }}
+    </p>
   </li>
   {% endfor %}
 </ul>
