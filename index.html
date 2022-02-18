@@ -7,7 +7,7 @@ title: The Brunos
 <ul>
   {% for bruno in site.data.bruno %}
   <li>
-    <a href="#{{ bruno.name }}">{{ bruno.name }}</a>
+    <a href="#{{ bruno.name | remove: ' ' }}">{{ bruno.name }}</a>
   </li>
   {% endfor %}
 </ul>
@@ -15,7 +15,7 @@ title: The Brunos
 <ul>
   {% for bruno in site.data.bruno %}
   <li>
-    <p id="{{ bruno.name }}">{{ bruno.name }}</p>
+    <p id="{{ bruno.name | remove: ' ' }}">{{ bruno.name }}</p>
     <p>
       <meter min="0" max="1000000" low="10000" high="500000" optimum="100000" value="{{ bruno.health }}"></meter>
       {{ bruno.health }}
