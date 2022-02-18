@@ -2,10 +2,20 @@
 layout: main
 title: The Brunos
 ---
+<h1>Brunos</h1>
+<h2>List of Brunos: Table #1</h2>
 <ul>
   {% for bruno in site.data.bruno %}
   <li>
-    <p>{{ bruno.name }}</p>
+    <a href="#{{ bruno.name }}"></a>
+  </li>
+  {% endfor %}
+</ul>
+<h2>Detailed List of Brunos: Table #2</h2>
+<ul>
+  {% for bruno in site.data.bruno %}
+  <li>
+    <p id="{{ bruno.name }}">{{ bruno.name }}</p>
     <p>
       <meter min="0" max="1000000" low="10000" high="500000" optimum="100000" value="{{ bruno.health }}"></meter>
       {{ bruno.health }}
